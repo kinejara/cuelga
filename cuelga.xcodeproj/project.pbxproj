@@ -1,0 +1,491 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EEB272C61A71856A0067DA62 /* CuelgaCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB272C51A71856A0067DA62 /* CuelgaCommon.m */; };
+		EED4DB3D1A70D6E300B3C504 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EED4DB3C1A70D6E300B3C504 /* main.m */; };
+		EED4DB401A70D6E300B3C504 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EED4DB3F1A70D6E300B3C504 /* AppDelegate.m */; };
+		EED4DB431A70D6E300B3C504 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EED4DB421A70D6E300B3C504 /* FirstViewController.m */; };
+		EED4DB461A70D6E300B3C504 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EED4DB451A70D6E300B3C504 /* SecondViewController.m */; };
+		EED4DB491A70D6E300B3C504 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EED4DB471A70D6E300B3C504 /* Main.storyboard */; };
+		EED4DB4B1A70D6E300B3C504 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EED4DB4A1A70D6E300B3C504 /* Images.xcassets */; };
+		EED4DB4E1A70D6E300B3C504 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EED4DB4C1A70D6E300B3C504 /* LaunchScreen.xib */; };
+		EED4DB5A1A70D6E400B3C504 /* cuelgaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EED4DB591A70D6E400B3C504 /* cuelgaTests.m */; };
+		EED4DB691A70DB7A00B3C504 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EED4DB671A70DB7A00B3C504 /* AddressBook.framework */; };
+		EED4DB6A1A70DB7A00B3C504 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EED4DB681A70DB7A00B3C504 /* AddressBookUI.framework */; };
+		EED4DB6D1A70ECCC00B3C504 /* noContact.png in Resources */ = {isa = PBXBuildFile; fileRef = EED4DB6C1A70ECCC00B3C504 /* noContact.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EED4DB541A70D6E400B3C504 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EED4DB2F1A70D6E300B3C504 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EED4DB361A70D6E300B3C504;
+			remoteInfo = cuelga;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EEB272C41A71856A0067DA62 /* CuelgaCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CuelgaCommon.h; sourceTree = "<group>"; };
+		EEB272C51A71856A0067DA62 /* CuelgaCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CuelgaCommon.m; sourceTree = "<group>"; };
+		EEB272C81A7187A60067DA62 /* CuelgaPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CuelgaPrefixHeader.pch; sourceTree = "<group>"; };
+		EED4DB371A70D6E300B3C504 /* cuelga.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cuelga.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EED4DB3B1A70D6E300B3C504 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EED4DB3C1A70D6E300B3C504 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EED4DB3E1A70D6E300B3C504 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EED4DB3F1A70D6E300B3C504 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EED4DB411A70D6E300B3C504 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		EED4DB421A70D6E300B3C504 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		EED4DB441A70D6E300B3C504 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		EED4DB451A70D6E300B3C504 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		EED4DB481A70D6E300B3C504 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EED4DB4A1A70D6E300B3C504 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		EED4DB4D1A70D6E300B3C504 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		EED4DB531A70D6E400B3C504 /* cuelgaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cuelgaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EED4DB581A70D6E400B3C504 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EED4DB591A70D6E400B3C504 /* cuelgaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = cuelgaTests.m; sourceTree = "<group>"; };
+		EED4DB671A70DB7A00B3C504 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		EED4DB681A70DB7A00B3C504 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		EED4DB6C1A70ECCC00B3C504 /* noContact.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noContact.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EED4DB341A70D6E300B3C504 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EED4DB691A70DB7A00B3C504 /* AddressBook.framework in Frameworks */,
+				EED4DB6A1A70DB7A00B3C504 /* AddressBookUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EED4DB501A70D6E400B3C504 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EEB272C71A7185700067DA62 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				EEB272C41A71856A0067DA62 /* CuelgaCommon.h */,
+				EEB272C51A71856A0067DA62 /* CuelgaCommon.m */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		EEB272C91A7189E60067DA62 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EED4DB6C1A70ECCC00B3C504 /* noContact.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		EED4DB2E1A70D6E300B3C504 = {
+			isa = PBXGroup;
+			children = (
+				EED4DB391A70D6E300B3C504 /* cuelga */,
+				EED4DB561A70D6E400B3C504 /* cuelgaTests */,
+				EED4DB381A70D6E300B3C504 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EED4DB381A70D6E300B3C504 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EED4DB371A70D6E300B3C504 /* cuelga.app */,
+				EED4DB531A70D6E400B3C504 /* cuelgaTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EED4DB391A70D6E300B3C504 /* cuelga */ = {
+			isa = PBXGroup;
+			children = (
+				EEB272C91A7189E60067DA62 /* Resources */,
+				EEB272C71A7185700067DA62 /* Common */,
+				EED4DB6B1A70DB8700B3C504 /* Frameworks */,
+				EED4DB631A70D70100B3C504 /* Views */,
+				EED4DB3E1A70D6E300B3C504 /* AppDelegate.h */,
+				EED4DB3F1A70D6E300B3C504 /* AppDelegate.m */,
+				EED4DB471A70D6E300B3C504 /* Main.storyboard */,
+				EED4DB4A1A70D6E300B3C504 /* Images.xcassets */,
+				EED4DB4C1A70D6E300B3C504 /* LaunchScreen.xib */,
+				EED4DB3A1A70D6E300B3C504 /* Supporting Files */,
+			);
+			path = cuelga;
+			sourceTree = "<group>";
+		};
+		EED4DB3A1A70D6E300B3C504 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EEB272C81A7187A60067DA62 /* CuelgaPrefixHeader.pch */,
+				EED4DB3B1A70D6E300B3C504 /* Info.plist */,
+				EED4DB3C1A70D6E300B3C504 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EED4DB561A70D6E400B3C504 /* cuelgaTests */ = {
+			isa = PBXGroup;
+			children = (
+				EED4DB591A70D6E400B3C504 /* cuelgaTests.m */,
+				EED4DB571A70D6E400B3C504 /* Supporting Files */,
+			);
+			path = cuelgaTests;
+			sourceTree = "<group>";
+		};
+		EED4DB571A70D6E400B3C504 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EED4DB581A70D6E400B3C504 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EED4DB631A70D70100B3C504 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EED4DB411A70D6E300B3C504 /* FirstViewController.h */,
+				EED4DB421A70D6E300B3C504 /* FirstViewController.m */,
+				EED4DB441A70D6E300B3C504 /* SecondViewController.h */,
+				EED4DB451A70D6E300B3C504 /* SecondViewController.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		EED4DB6B1A70DB8700B3C504 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EED4DB671A70DB7A00B3C504 /* AddressBook.framework */,
+				EED4DB681A70DB7A00B3C504 /* AddressBookUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EED4DB361A70D6E300B3C504 /* cuelga */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EED4DB5D1A70D6E400B3C504 /* Build configuration list for PBXNativeTarget "cuelga" */;
+			buildPhases = (
+				EED4DB331A70D6E300B3C504 /* Sources */,
+				EED4DB341A70D6E300B3C504 /* Frameworks */,
+				EED4DB351A70D6E300B3C504 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = cuelga;
+			productName = cuelga;
+			productReference = EED4DB371A70D6E300B3C504 /* cuelga.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EED4DB521A70D6E400B3C504 /* cuelgaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EED4DB601A70D6E400B3C504 /* Build configuration list for PBXNativeTarget "cuelgaTests" */;
+			buildPhases = (
+				EED4DB4F1A70D6E400B3C504 /* Sources */,
+				EED4DB501A70D6E400B3C504 /* Frameworks */,
+				EED4DB511A70D6E400B3C504 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EED4DB551A70D6E400B3C504 /* PBXTargetDependency */,
+			);
+			name = cuelgaTests;
+			productName = cuelgaTests;
+			productReference = EED4DB531A70D6E400B3C504 /* cuelgaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EED4DB2F1A70D6E300B3C504 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = kineticsdk;
+				TargetAttributes = {
+					EED4DB361A70D6E300B3C504 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					EED4DB521A70D6E400B3C504 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = EED4DB361A70D6E300B3C504;
+					};
+				};
+			};
+			buildConfigurationList = EED4DB321A70D6E300B3C504 /* Build configuration list for PBXProject "cuelga" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EED4DB2E1A70D6E300B3C504;
+			productRefGroup = EED4DB381A70D6E300B3C504 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EED4DB361A70D6E300B3C504 /* cuelga */,
+				EED4DB521A70D6E400B3C504 /* cuelgaTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EED4DB351A70D6E300B3C504 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EED4DB491A70D6E300B3C504 /* Main.storyboard in Resources */,
+				EED4DB6D1A70ECCC00B3C504 /* noContact.png in Resources */,
+				EED4DB4E1A70D6E300B3C504 /* LaunchScreen.xib in Resources */,
+				EED4DB4B1A70D6E300B3C504 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EED4DB511A70D6E400B3C504 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EED4DB331A70D6E300B3C504 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EED4DB461A70D6E300B3C504 /* SecondViewController.m in Sources */,
+				EEB272C61A71856A0067DA62 /* CuelgaCommon.m in Sources */,
+				EED4DB401A70D6E300B3C504 /* AppDelegate.m in Sources */,
+				EED4DB431A70D6E300B3C504 /* FirstViewController.m in Sources */,
+				EED4DB3D1A70D6E300B3C504 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EED4DB4F1A70D6E400B3C504 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EED4DB5A1A70D6E400B3C504 /* cuelgaTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EED4DB551A70D6E400B3C504 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EED4DB361A70D6E300B3C504 /* cuelga */;
+			targetProxy = EED4DB541A70D6E400B3C504 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EED4DB471A70D6E300B3C504 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EED4DB481A70D6E300B3C504 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EED4DB4C1A70D6E300B3C504 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EED4DB4D1A70D6E300B3C504 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EED4DB5B1A70D6E400B3C504 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EED4DB5C1A70D6E400B3C504 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EED4DB5E1A70D6E400B3C504 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = cuelga/CuelgaPrefixHeader.pch;
+				INFOPLIST_FILE = cuelga/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EED4DB5F1A70D6E400B3C504 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = cuelga/CuelgaPrefixHeader.pch;
+				INFOPLIST_FILE = cuelga/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		EED4DB611A70D6E400B3C504 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = cuelgaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/cuelga.app/cuelga";
+			};
+			name = Debug;
+		};
+		EED4DB621A70D6E400B3C504 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = cuelgaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/cuelga.app/cuelga";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EED4DB321A70D6E300B3C504 /* Build configuration list for PBXProject "cuelga" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EED4DB5B1A70D6E400B3C504 /* Debug */,
+				EED4DB5C1A70D6E400B3C504 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EED4DB5D1A70D6E400B3C504 /* Build configuration list for PBXNativeTarget "cuelga" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EED4DB5E1A70D6E400B3C504 /* Debug */,
+				EED4DB5F1A70D6E400B3C504 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EED4DB601A70D6E400B3C504 /* Build configuration list for PBXNativeTarget "cuelgaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EED4DB611A70D6E400B3C504 /* Debug */,
+				EED4DB621A70D6E400B3C504 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EED4DB2F1A70D6E300B3C504 /* Project object */;
+}
