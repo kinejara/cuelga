@@ -7,18 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF06A60C1A8A8F5700DB44EA /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF06A60B1A8A8F5700DB44EA /* SecondViewController.m */; };
+		CF06A60F1A8A95E300DB44EA /* SettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF06A60E1A8A95E300DB44EA /* SettingsTableViewController.m */; };
+		CF06A6131A8A9A7400DB44EA /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = CF06A6121A8A9A7400DB44EA /* Contact.m */; };
+		CF06A6171A8A9B8E00DB44EA /* CallManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CF06A6161A8A9B8E00DB44EA /* CallManager.m */; };
+		CF83E4231A9ECEB6008FD8DF /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF83E4111A9ECEB6008FD8DF /* Roboto-Black.ttf */; };
+		CF83E4241A9ECEB6008FD8DF /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF83E4121A9ECEB6008FD8DF /* Roboto-BlackItalic.ttf */; };
+		CF83E4251A9ECEB6008FD8DF /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF83E4131A9ECEB6008FD8DF /* Roboto-Bold.ttf */; };
+		CF83E4261A9ECEB6008FD8DF /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF83E4141A9ECEB6008FD8DF /* Roboto-BoldItalic.ttf */; };
+		CF83E4271A9ECEB6008FD8DF /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF83E4151A9ECEB6008FD8DF /* Roboto-Italic.ttf */; };
+		CF83E4281A9ECEB6008FD8DF /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF83E4161A9ECEB6008FD8DF /* Roboto-Light.ttf */; };
+		CF83E4291A9ECEB6008FD8DF /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF83E4171A9ECEB6008FD8DF /* Roboto-LightItalic.ttf */; };
+		CF83E42A1A9ECEB6008FD8DF /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF83E4181A9ECEB6008FD8DF /* Roboto-Medium.ttf */; };
+		CF83E42B1A9ECEB6008FD8DF /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF83E4191A9ECEB6008FD8DF /* Roboto-MediumItalic.ttf */; };
+		CF83E42C1A9ECEB6008FD8DF /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF83E41A1A9ECEB6008FD8DF /* Roboto-Regular.ttf */; };
+		CF83E42D1A9ECEB6008FD8DF /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF83E41B1A9ECEB6008FD8DF /* Roboto-Thin.ttf */; };
+		CF83E42E1A9ECEB6008FD8DF /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF83E41C1A9ECEB6008FD8DF /* Roboto-ThinItalic.ttf */; };
+		CF83E42F1A9ECEB6008FD8DF /* RobotoCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF83E41D1A9ECEB6008FD8DF /* RobotoCondensed-Bold.ttf */; };
+		CF83E4301A9ECEB6008FD8DF /* RobotoCondensed-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF83E41E1A9ECEB6008FD8DF /* RobotoCondensed-BoldItalic.ttf */; };
+		CF83E4311A9ECEB6008FD8DF /* RobotoCondensed-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF83E41F1A9ECEB6008FD8DF /* RobotoCondensed-Italic.ttf */; };
+		CF83E4321A9ECEB6008FD8DF /* RobotoCondensed-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF83E4201A9ECEB6008FD8DF /* RobotoCondensed-Light.ttf */; };
+		CF83E4331A9ECEB6008FD8DF /* RobotoCondensed-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF83E4211A9ECEB6008FD8DF /* RobotoCondensed-LightItalic.ttf */; };
+		CF83E4341A9ECEB6008FD8DF /* RobotoCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF83E4221A9ECEB6008FD8DF /* RobotoCondensed-Regular.ttf */; };
+		CF9841961A9D4AD600DCDF3C /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF9841951A9D4AD600DCDF3C /* CoreTelephony.framework */; };
+		CFDE85811A9BDF920096F256 /* NSString+PNGValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = CFDE85801A9BDF920096F256 /* NSString+PNGValidation.m */; };
+		CFDE85841A9BE00F0096F256 /* PNGPhoneNumberFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = CFDE85831A9BE00F0096F256 /* PNGPhoneNumberFormatter.m */; };
 		EEB272C61A71856A0067DA62 /* CuelgaCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB272C51A71856A0067DA62 /* CuelgaCommon.m */; };
 		EED4DB3D1A70D6E300B3C504 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EED4DB3C1A70D6E300B3C504 /* main.m */; };
 		EED4DB401A70D6E300B3C504 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EED4DB3F1A70D6E300B3C504 /* AppDelegate.m */; };
 		EED4DB431A70D6E300B3C504 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EED4DB421A70D6E300B3C504 /* FirstViewController.m */; };
-		EED4DB461A70D6E300B3C504 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EED4DB451A70D6E300B3C504 /* SecondViewController.m */; };
 		EED4DB491A70D6E300B3C504 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EED4DB471A70D6E300B3C504 /* Main.storyboard */; };
 		EED4DB4B1A70D6E300B3C504 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EED4DB4A1A70D6E300B3C504 /* Images.xcassets */; };
 		EED4DB4E1A70D6E300B3C504 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EED4DB4C1A70D6E300B3C504 /* LaunchScreen.xib */; };
 		EED4DB5A1A70D6E400B3C504 /* cuelgaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EED4DB591A70D6E400B3C504 /* cuelgaTests.m */; };
 		EED4DB691A70DB7A00B3C504 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EED4DB671A70DB7A00B3C504 /* AddressBook.framework */; };
 		EED4DB6A1A70DB7A00B3C504 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EED4DB681A70DB7A00B3C504 /* AddressBookUI.framework */; };
-		EED4DB6D1A70ECCC00B3C504 /* noContact.png in Resources */ = {isa = PBXBuildFile; fileRef = EED4DB6C1A70ECCC00B3C504 /* noContact.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +55,37 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CF06A60A1A8A8F5700DB44EA /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		CF06A60B1A8A8F5700DB44EA /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		CF06A60D1A8A95E300DB44EA /* SettingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsTableViewController.h; sourceTree = "<group>"; };
+		CF06A60E1A8A95E300DB44EA /* SettingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsTableViewController.m; sourceTree = "<group>"; };
+		CF06A6111A8A9A7400DB44EA /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
+		CF06A6121A8A9A7400DB44EA /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
+		CF06A6151A8A9B8E00DB44EA /* CallManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallManager.h; sourceTree = "<group>"; };
+		CF06A6161A8A9B8E00DB44EA /* CallManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CallManager.m; sourceTree = "<group>"; };
+		CF83E4111A9ECEB6008FD8DF /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
+		CF83E4121A9ECEB6008FD8DF /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
+		CF83E4131A9ECEB6008FD8DF /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		CF83E4141A9ECEB6008FD8DF /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BoldItalic.ttf"; sourceTree = "<group>"; };
+		CF83E4151A9ECEB6008FD8DF /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Italic.ttf"; sourceTree = "<group>"; };
+		CF83E4161A9ECEB6008FD8DF /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		CF83E4171A9ECEB6008FD8DF /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
+		CF83E4181A9ECEB6008FD8DF /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		CF83E4191A9ECEB6008FD8DF /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
+		CF83E41A1A9ECEB6008FD8DF /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		CF83E41B1A9ECEB6008FD8DF /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		CF83E41C1A9ECEB6008FD8DF /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
+		CF83E41D1A9ECEB6008FD8DF /* RobotoCondensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Bold.ttf"; sourceTree = "<group>"; };
+		CF83E41E1A9ECEB6008FD8DF /* RobotoCondensed-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-BoldItalic.ttf"; sourceTree = "<group>"; };
+		CF83E41F1A9ECEB6008FD8DF /* RobotoCondensed-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Italic.ttf"; sourceTree = "<group>"; };
+		CF83E4201A9ECEB6008FD8DF /* RobotoCondensed-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Light.ttf"; sourceTree = "<group>"; };
+		CF83E4211A9ECEB6008FD8DF /* RobotoCondensed-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-LightItalic.ttf"; sourceTree = "<group>"; };
+		CF83E4221A9ECEB6008FD8DF /* RobotoCondensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Regular.ttf"; sourceTree = "<group>"; };
+		CF9841951A9D4AD600DCDF3C /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		CFDE857F1A9BDF920096F256 /* NSString+PNGValidation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+PNGValidation.h"; sourceTree = "<group>"; };
+		CFDE85801A9BDF920096F256 /* NSString+PNGValidation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+PNGValidation.m"; sourceTree = "<group>"; };
+		CFDE85821A9BE00F0096F256 /* PNGPhoneNumberFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNGPhoneNumberFormatter.h; sourceTree = "<group>"; };
+		CFDE85831A9BE00F0096F256 /* PNGPhoneNumberFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PNGPhoneNumberFormatter.m; sourceTree = "<group>"; };
 		EEB272C41A71856A0067DA62 /* CuelgaCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CuelgaCommon.h; sourceTree = "<group>"; };
 		EEB272C51A71856A0067DA62 /* CuelgaCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CuelgaCommon.m; sourceTree = "<group>"; };
 		EEB272C81A7187A60067DA62 /* CuelgaPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CuelgaPrefixHeader.pch; sourceTree = "<group>"; };
@@ -42,8 +96,6 @@
 		EED4DB3F1A70D6E300B3C504 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		EED4DB411A70D6E300B3C504 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		EED4DB421A70D6E300B3C504 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		EED4DB441A70D6E300B3C504 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		EED4DB451A70D6E300B3C504 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		EED4DB481A70D6E300B3C504 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EED4DB4A1A70D6E300B3C504 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EED4DB4D1A70D6E300B3C504 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -52,7 +104,6 @@
 		EED4DB591A70D6E400B3C504 /* cuelgaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = cuelgaTests.m; sourceTree = "<group>"; };
 		EED4DB671A70DB7A00B3C504 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		EED4DB681A70DB7A00B3C504 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
-		EED4DB6C1A70ECCC00B3C504 /* noContact.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noContact.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF9841961A9D4AD600DCDF3C /* CoreTelephony.framework in Frameworks */,
 				EED4DB691A70DB7A00B3C504 /* AddressBook.framework in Frameworks */,
 				EED4DB6A1A70DB7A00B3C504 /* AddressBookUI.framework in Frameworks */,
 			);
@@ -75,6 +127,60 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CF06A6101A8A9A6200DB44EA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CFDE85821A9BE00F0096F256 /* PNGPhoneNumberFormatter.h */,
+				CFDE85831A9BE00F0096F256 /* PNGPhoneNumberFormatter.m */,
+				CF06A6111A8A9A7400DB44EA /* Contact.h */,
+				CF06A6121A8A9A7400DB44EA /* Contact.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		CF06A6141A8A9B3400DB44EA /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				CF06A6151A8A9B8E00DB44EA /* CallManager.h */,
+				CF06A6161A8A9B8E00DB44EA /* CallManager.m */,
+			);
+			name = Manager;
+			sourceTree = "<group>";
+		};
+		CF83E4101A9ECEB6008FD8DF /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CF83E4111A9ECEB6008FD8DF /* Roboto-Black.ttf */,
+				CF83E4121A9ECEB6008FD8DF /* Roboto-BlackItalic.ttf */,
+				CF83E4131A9ECEB6008FD8DF /* Roboto-Bold.ttf */,
+				CF83E4141A9ECEB6008FD8DF /* Roboto-BoldItalic.ttf */,
+				CF83E4151A9ECEB6008FD8DF /* Roboto-Italic.ttf */,
+				CF83E4161A9ECEB6008FD8DF /* Roboto-Light.ttf */,
+				CF83E4171A9ECEB6008FD8DF /* Roboto-LightItalic.ttf */,
+				CF83E4181A9ECEB6008FD8DF /* Roboto-Medium.ttf */,
+				CF83E4191A9ECEB6008FD8DF /* Roboto-MediumItalic.ttf */,
+				CF83E41A1A9ECEB6008FD8DF /* Roboto-Regular.ttf */,
+				CF83E41B1A9ECEB6008FD8DF /* Roboto-Thin.ttf */,
+				CF83E41C1A9ECEB6008FD8DF /* Roboto-ThinItalic.ttf */,
+				CF83E41D1A9ECEB6008FD8DF /* RobotoCondensed-Bold.ttf */,
+				CF83E41E1A9ECEB6008FD8DF /* RobotoCondensed-BoldItalic.ttf */,
+				CF83E41F1A9ECEB6008FD8DF /* RobotoCondensed-Italic.ttf */,
+				CF83E4201A9ECEB6008FD8DF /* RobotoCondensed-Light.ttf */,
+				CF83E4211A9ECEB6008FD8DF /* RobotoCondensed-LightItalic.ttf */,
+				CF83E4221A9ECEB6008FD8DF /* RobotoCondensed-Regular.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
+		CFDE857E1A9BDF6D0096F256 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				CFDE857F1A9BDF920096F256 /* NSString+PNGValidation.h */,
+				CFDE85801A9BDF920096F256 /* NSString+PNGValidation.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 		EEB272C71A7185700067DA62 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -87,7 +193,7 @@
 		EEB272C91A7189E60067DA62 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				EED4DB6C1A70ECCC00B3C504 /* noContact.png */,
+				CF83E4101A9ECEB6008FD8DF /* fonts */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -113,6 +219,9 @@
 		EED4DB391A70D6E300B3C504 /* cuelga */ = {
 			isa = PBXGroup;
 			children = (
+				CFDE857E1A9BDF6D0096F256 /* Categories */,
+				CF06A6141A8A9B3400DB44EA /* Manager */,
+				CF06A6101A8A9A6200DB44EA /* Model */,
 				EEB272C91A7189E60067DA62 /* Resources */,
 				EEB272C71A7185700067DA62 /* Common */,
 				EED4DB6B1A70DB8700B3C504 /* Frameworks */,
@@ -159,8 +268,10 @@
 			children = (
 				EED4DB411A70D6E300B3C504 /* FirstViewController.h */,
 				EED4DB421A70D6E300B3C504 /* FirstViewController.m */,
-				EED4DB441A70D6E300B3C504 /* SecondViewController.h */,
-				EED4DB451A70D6E300B3C504 /* SecondViewController.m */,
+				CF06A60A1A8A8F5700DB44EA /* SecondViewController.h */,
+				CF06A60B1A8A8F5700DB44EA /* SecondViewController.m */,
+				CF06A60D1A8A95E300DB44EA /* SettingsTableViewController.h */,
+				CF06A60E1A8A95E300DB44EA /* SettingsTableViewController.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -168,6 +279,7 @@
 		EED4DB6B1A70DB8700B3C504 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CF9841951A9D4AD600DCDF3C /* CoreTelephony.framework */,
 				EED4DB671A70DB7A00B3C504 /* AddressBook.framework */,
 				EED4DB681A70DB7A00B3C504 /* AddressBookUI.framework */,
 			);
@@ -223,6 +335,11 @@
 				TargetAttributes = {
 					EED4DB361A70D6E300B3C504 = {
 						CreatedOnToolsVersion = 6.1.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					EED4DB521A70D6E400B3C504 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -254,8 +371,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF83E4251A9ECEB6008FD8DF /* Roboto-Bold.ttf in Resources */,
+				CF83E4291A9ECEB6008FD8DF /* Roboto-LightItalic.ttf in Resources */,
+				CF83E4311A9ECEB6008FD8DF /* RobotoCondensed-Italic.ttf in Resources */,
+				CF83E4301A9ECEB6008FD8DF /* RobotoCondensed-BoldItalic.ttf in Resources */,
+				CF83E42B1A9ECEB6008FD8DF /* Roboto-MediumItalic.ttf in Resources */,
+				CF83E4271A9ECEB6008FD8DF /* Roboto-Italic.ttf in Resources */,
+				CF83E4281A9ECEB6008FD8DF /* Roboto-Light.ttf in Resources */,
 				EED4DB491A70D6E300B3C504 /* Main.storyboard in Resources */,
-				EED4DB6D1A70ECCC00B3C504 /* noContact.png in Resources */,
+				CF83E4261A9ECEB6008FD8DF /* Roboto-BoldItalic.ttf in Resources */,
+				CF83E4241A9ECEB6008FD8DF /* Roboto-BlackItalic.ttf in Resources */,
+				CF83E42D1A9ECEB6008FD8DF /* Roboto-Thin.ttf in Resources */,
+				CF83E42C1A9ECEB6008FD8DF /* Roboto-Regular.ttf in Resources */,
+				CF83E4331A9ECEB6008FD8DF /* RobotoCondensed-LightItalic.ttf in Resources */,
+				CF83E4341A9ECEB6008FD8DF /* RobotoCondensed-Regular.ttf in Resources */,
+				CF83E42A1A9ECEB6008FD8DF /* Roboto-Medium.ttf in Resources */,
+				CF83E4321A9ECEB6008FD8DF /* RobotoCondensed-Light.ttf in Resources */,
+				CF83E42E1A9ECEB6008FD8DF /* Roboto-ThinItalic.ttf in Resources */,
+				CF83E42F1A9ECEB6008FD8DF /* RobotoCondensed-Bold.ttf in Resources */,
+				CF83E4231A9ECEB6008FD8DF /* Roboto-Black.ttf in Resources */,
 				EED4DB4E1A70D6E300B3C504 /* LaunchScreen.xib in Resources */,
 				EED4DB4B1A70D6E300B3C504 /* Images.xcassets in Resources */,
 			);
@@ -275,11 +409,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EED4DB461A70D6E300B3C504 /* SecondViewController.m in Sources */,
+				CF06A60F1A8A95E300DB44EA /* SettingsTableViewController.m in Sources */,
+				CF06A60C1A8A8F5700DB44EA /* SecondViewController.m in Sources */,
+				CFDE85811A9BDF920096F256 /* NSString+PNGValidation.m in Sources */,
 				EEB272C61A71856A0067DA62 /* CuelgaCommon.m in Sources */,
 				EED4DB401A70D6E300B3C504 /* AppDelegate.m in Sources */,
+				CF06A6131A8A9A7400DB44EA /* Contact.m in Sources */,
+				CFDE85841A9BE00F0096F256 /* PNGPhoneNumberFormatter.m in Sources */,
 				EED4DB431A70D6E300B3C504 /* FirstViewController.m in Sources */,
 				EED4DB3D1A70D6E300B3C504 /* main.m in Sources */,
+				CF06A6171A8A9B8E00DB44EA /* CallManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

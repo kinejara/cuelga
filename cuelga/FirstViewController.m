@@ -7,13 +7,12 @@
 //
 
 #import "FirstViewController.h"
+#import "Contact.h"
+#import "CallManager.h"
+#import "AppDelegate.h"
 
 @interface FirstViewController ()
 
-@property (nonatomic, weak) IBOutlet UIImageView *contactImage;
-@property (nonatomic, weak) IBOutlet UILabel *contactPhoneNumber;
-@property (nonatomic, weak) IBOutlet UILabel *contactName;
-@property (nonatomic, weak) IBOutlet UIView *instructionsView;
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
 
 @property (nonatomic, strong) NSMutableArray *storeContactNames;
@@ -25,15 +24,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
+   
     self.automaticallyAdjustsScrollViewInsets = NO;
     
     self.storeContactNames = [NSMutableArray arrayWithArray:CUELGAStoreContacts];
     self.storeContactPhones = [NSMutableArray arrayWithArray:CUELGAStoreNumbers];
  
     [self customizeNavigationBar];
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -87,7 +84,6 @@
 - (void)peoplePickerNavigationController:(ABPeoplePickerNavigationController *)peoplePicker didSelectPerson:(ABRecordRef)person property:(ABPropertyID)property identifier:(ABMultiValueIdentifier)identifier {
 
     NSString *firstName = (__bridge NSString *)ABRecordCopyValue(person, kABPersonFirstNameProperty);
-    
     NSString *lastName = (__bridge NSString *)ABRecordCopyValue(person, kABPersonLastNameProperty);
     
     NSData  *imgData = (__bridge NSData *)ABPersonCopyImageData(person);
@@ -110,7 +106,7 @@
         contactImg = [UIImage imageNamed:@"noContact"];
     }
     if ([self validatePhoneNumber:number]) {
-        [self updateContactOnScreenWith:number withContactName:fullName andPicture:contactImg];
+        [self updateContactOnScreenWith:number withContactName:fullName];
     } else {
          //TODO: alert to pick another contact
         NSLog(@"invalid");
@@ -122,14 +118,9 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (void)updateContactOnScreenWith:(NSString *)phoneNumber withContactName:(NSString *)contactName andPicture:(UIImage *)contactPicture {
+- (void)updateContactOnScreenWith:(NSString *)phoneNumber withContactName:(NSString *)contactName  {
     
-    self.contactImage.image = contactPicture;
-    self.contactName.text = contactName;
-    self.contactPhoneNumber.text = phoneNumber;
-    
-    [self storeNewRecentNumberWithContactName:contactName andPhone:phoneNumber];
-    
+    [self storeFavNumberWithContactName:contactName andPhone:phoneNumber];
 }
 
 - (BOOL)validatePhoneNumber:(NSString *)phone {
@@ -147,15 +138,14 @@
     return [[phone stringByTrimmingCharactersInSet:invalidCharacterSet] isEqualToString:@""];
 }
 
-- (void)storeNewRecentNumberWithContactName:(NSString *)contactName andPhone:(NSString *)phone {
+- (void)storeFavNumberWithContactName:(NSString *)contactName andPhone:(NSString *)phone {
 
-    
     if ([self.storeContactNames containsObject:@"Selecciona un contacto presionando '+' "]) {
         [self.storeContactNames removeObjectAtIndex:0];
         [self.storeContactPhones removeObjectAtIndex:0];
     }
     
-    if (self.storeContactPhones.count >= 5) {
+    if (self.storeContactPhones.count >= 10) {
         [self.storeContactPhones removeObjectAtIndex:0];
         [self.storeContactNames removeObjectAtIndex:0];
     }
@@ -166,7 +156,71 @@
         [self.storeContactNames addObject:contactName];
     }
     
+    [DNPStoreSettings setValue:self.storeContactNames forKey:@"storeNames"];
+    [DNPStoreSettings setValue:self.storeContactPhones forKey:@"storeNumbers"];
+    
     [self.tableView reloadData];
+}
+
+#pragma mark Call
+
+- (IBAction)prepareCallContactWithPhone:(NSString *)phoneNumber  {
+    
+    if (![phoneNumber isEqualToString:@""]) {
+    
+        if (!CUELGAStoreFirstTime) {
+            [self firstTimeCallAlert:phoneNumber];
+            [DNPStoreSettings setBool:YES forKey:@"storePreviousLaunch"];
+        } else {
+            [self callWithPhoneNumber:phoneNumber];
+        }
+    
+    } else {
+        [self noValidContactAlert];
+    }
+}
+
+- (void)noValidContactAlert {
+    
+    NSMutableArray *alertActions = [NSMutableArray new];
+    
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+    }];
+    
+    [alertActions addObject:cancelAction];
+    
+    ALERT_WITH_ACTIONS(@"!", @"You need to add a new contact\nPress over '+'\nAnd select a contact from your contact list.", self, alertActions, UIAlertControllerStyleAlert);
+}
+
+- (void)firstTimeCallAlert:(NSString *)phoneNumber {
+    
+    NSMutableArray *alertActions = [NSMutableArray new];
+    
+    UIAlertAction *call = [UIAlertAction actionWithTitle:@"Call" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        [self callWithPhoneNumber:phoneNumber];
+    }];
+    
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+    }];
+    
+    [alertActions addObject:call];
+    [alertActions addObject:cancelAction];
+    
+    ALERT_WITH_ACTIONS(@"Make Phone Call", @"Remember By default you will be alert in 5 minutes \n however you can go to settings and choose your alert time.", self, alertActions, UIAlertControllerStyleAlert);
+}
+
+- (void)callWithPhoneNumber:(NSString *)phoneNumber {
+
+    Contact *contactModel = [Contact new];
+    contactModel.phoneNumber = phoneNumber;
+    
+    NSURL *phoneUrl = [[CallManager sharedInstance] formatPhoneNumber:contactModel];
+    
+    if ([[UIApplication sharedApplication] canOpenURL:phoneUrl]) {
+        [[UIApplication sharedApplication] openURL:phoneUrl];
+        AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+        [appDelegate setCallNotification];
+    }
 }
 
 #pragma mark - Table view data source
@@ -176,7 +230,8 @@
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return @"Contactos Recientes";
+    //TODO: translate this
+    return @"Contactos Frecuentes";
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -189,7 +244,6 @@
     return self.storeContactNames.count;
 }
 
-
  - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
      
      NSUInteger dataItemIndex = (self.storeContactNames.count - 1 - indexPath.row);
@@ -200,7 +254,7 @@
          cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
      }
      
-     cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:14.0];
+     cell.textLabel.font = [UIFont fontWithName:@"Roboto-Regular" size:22.0];
      
      cell.textLabel.text = self.storeContactNames[dataItemIndex];
      cell.detailTextLabel.text = self.storeContactPhones[dataItemIndex];
@@ -210,9 +264,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    NSUInteger dataItemIndex = (self.storeContactNames.count - 1 - indexPath.row);
+    
+    [self prepareCallContactWithPhone:self.storeContactPhones[dataItemIndex]];
 }
-
-
-
 
 @end
