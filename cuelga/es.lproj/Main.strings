@@ -1,0 +1,45 @@
+
+/* Class = "IBUITextField"; placeholder = "Default"; ObjectID = "6hN-1L-YmV"; */
+"6hN-1L-YmV.placeholder" = "Default";
+
+/* Class = "IBUINavigationItem"; title = "Contactos"; ObjectID = "7iE-NY-L7l"; */
+"7iE-NY-L7l.title" = "Contactos";
+
+/* Class = "IBUIViewController"; title = "Call"; ObjectID = "8rJ-Kc-sve"; */
+"8rJ-Kc-sve.title" = "Llamar";
+
+/* Class = "IBUILabel"; text = "Time"; ObjectID = "9DP-4G-4lG"; */
+"9DP-4G-4lG.text" = "Alerta";
+
+/* Class = "IBUITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "OmP-Wt-y63"; */
+"OmP-Wt-y63.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "IBUIButton"; normalTitle = "Call"; ObjectID = "Uk0-cW-C2h"; */
+"Uk0-cW-C2h.normalTitle" = "Llamar";
+
+/* Class = "IBUILabel"; text = "Subtitle"; ObjectID = "a9m-5d-7gS"; */
+"a9m-5d-7gS.text" = "Subtitle";
+
+/* Class = "IBUITextField"; placeholder = "5 minutes"; ObjectID = "bnc-wK-2Xn"; */
+"bnc-wK-2Xn.placeholder" = "5 minutes";
+
+/* Class = "IBUINavigationItem"; title = "Call"; ObjectID = "cEk-5i-Lc0"; */
+"cEk-5i-Lc0.title" = "Call";
+
+/* Class = "IBUITabBarItem"; title = "Call"; ObjectID = "cPa-gy-q4n"; */
+"cPa-gy-q4n.title" = "";
+
+/* Class = "IBUINavigationItem"; title = "Settings"; ObjectID = "d8X-yc-6pW"; */
+"d8X-yc-6pW.title" = "Ajustes";
+
+/* Class = "IBUITextField"; placeholder = "Phone Number"; ObjectID = "gBh-YD-F8J"; */
+"gBh-YD-F8J.placeholder" = "Phone Number";
+
+/* Class = "IBUILabel"; text = "Sound"; ObjectID = "imP-Qd-gxX"; */
+"imP-Qd-gxX.text" = "Alarma";
+
+/* Class = "IBUITabBarItem"; title = "Settings"; ObjectID = "rXJ-ur-kOl"; */
+"rXJ-ur-kOl.title" = "Ajustes";
+
+/* Class = "IBUILabel"; text = "Title"; ObjectID = "t1g-NO-dyG"; */
+"t1g-NO-dyG.text" = "Title";

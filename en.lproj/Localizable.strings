@@ -1,0 +1,41 @@
+/* 
+  Localizable.strings
+  cuelga
+
+  Created by Jorge on 3/28/15.
+  Copyright (c) 2015 kineticsdk. All rights reserved.
+*/
+
+/*rate*/
+"CFBundleDisplayName" = "Hang Up";
+"CFBundleName" = "Hang Up";
+"Rate.DoYou" = "Do you enjoy this app ? then give us your comments.";
+/*Tutorial*/
+"Tutorial.title1" = "Select your contacts";
+"Tutorial.subTitle1" = "Press '+' to select up to 10 contacts from your contacts list\n when doing a call you will be alerted in 5 minutes but you can change this on configurations.";
+
+"Tutorial.title2" = "Dial a phone number";
+"Tutorial.subTitle2" = "No matter which kind of phone number you dial up,\nyou will be notified as soon your time call is over.";
+
+"Tutorial.title3" = "Configure your alert";
+"Tutorial.subTitle3" = "You can change the time and the sound of your alert so you don't waste your free minutes.";
+
+/*Contact*/
+"Contacts.tableTittle" = "Recents";
+"Contacts.title" = "Contacts";
+"Contacts.instructions" = "Press '+' to select a contact";
+/*Call section*/
+"Call.phoneNumber" = "Phone Number";
+"Call.title" = "";
+"Call.hangUp" = "Hang up now!!";
+
+/*Settings*/
+"Settings.minute" = "minute";
+"Settings.title" = "Settings";
+"Settings.time" = "Time";
+"Settings.alarm" = "Alarm";
+"Settings.info" = "Tips to save minutes:\n\n1.Carriers start to count the time as soon as you press call.\n\n2.Remember to not close the app while you are in a call.\n\n3.This app doesn't finish the call for you.\n\n4.In order to get notified the call needs to be dial from this app.";
+/*Alerts*/
+"Alert.YouNeed" = "You need to add a new contact\nPress over '+'\nAnd select a contact from your contact list.";
+"Alert.RememberBy" = "Remember By default you will be alert in 5 minutes \n but you can go to settings and choose your alert time.";
+"Alert.YouNeedType" = "You need type a valid phone number.";

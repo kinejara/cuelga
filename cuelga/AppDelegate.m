@@ -25,6 +25,7 @@
     [self callHandler];
     
     [[UIApplication sharedApplication] cancelAllLocalNotifications];
+    
     return YES;
 }
 
@@ -137,9 +138,10 @@
         UILocalNotification *localNotification = [[UILocalNotification alloc] init];
         localNotification.fireDate = [NSDate dateWithTimeInterval:1  sinceDate:[NSDate date]];
         localNotification.timeZone = [NSTimeZone defaultTimeZone];
+        localNotification.soundName = CUELGAStoreSound;
         //TODO: translate this alertBody
-        localNotification.alertBody = @"Cuelga !!!";
-        localNotification.soundName = UILocalNotificationDefaultSoundName;
+        localNotification.alertBody = NSLocalizedString(@"Call.hangUp", @"");
+        //localNotification.soundName = UILocalNotificationDefaultSoundName;
         localNotification.applicationIconBadgeNumber = 0;
         [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
     }

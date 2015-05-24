@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SecondViewController : UIViewController <UITextFieldDelegate>
-
+@interface CallSectionViewController : UIViewController <UITextFieldDelegate>
 
 @end
 

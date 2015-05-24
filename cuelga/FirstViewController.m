@@ -6,14 +6,20 @@
 //  Copyright (c) 2015 kineticsdk. All rights reserved.
 //
 
+#import <GoogleMobileAds/GoogleMobileAds.h>
 #import "FirstViewController.h"
 #import "Contact.h"
 #import "CallManager.h"
 #import "AppDelegate.h"
+#import "EAIntroPage.h"
+#import "EAIntroView.h"
 
-@interface FirstViewController ()
+@interface FirstViewController () <UITableViewDelegate, UITableViewDataSource, ABPeoplePickerNavigationControllerDelegate,EAIntroDelegate>
 
+@property (weak, nonatomic) IBOutlet GADBannerView *bottomBanner;
+@property (weak, nonatomic) IBOutlet GADBannerView *topBanner;
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
+@property (nonatomic, weak) IBOutlet UILabel *minuteLabel;
 
 @property (nonatomic, strong) NSMutableArray *storeContactNames;
 @property (nonatomic, strong) NSMutableArray *storeContactPhones;
@@ -27,15 +33,151 @@
    
     self.automaticallyAdjustsScrollViewInsets = NO;
     
+    self.title = NSLocalizedString(@"Contacts.title", @"");
+    
     self.storeContactNames = [NSMutableArray arrayWithArray:CUELGAStoreContacts];
     self.storeContactPhones = [NSMutableArray arrayWithArray:CUELGAStoreNumbers];
  
     [self customizeNavigationBar];
+    [self askingForRanking];
+    [self shouldShouldTutorial];
+    [self customizeTopBanner];
+    [self customizeBottomBanner];
 }
+
+- (void)customizeTopBanner {
+    self.topBanner.adUnitID = @"ca-app-pub-5770021040900540/2267668912";
+    self.topBanner.rootViewController = self;
+    [self.topBanner loadRequest:[GADRequest request]];
+}
+
+- (void)customizeBottomBanner {
+    self.bottomBanner.adUnitID = @"ca-app-pub-5770021040900540/7336996912";
+    self.bottomBanner.rootViewController = self;
+    [self.bottomBanner loadRequest:[GADRequest request]];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self customizeMinuteLabel];
+}
+
+- (void)shouldShouldTutorial {
+    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"HasLaunchedOnce"]){
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"HasLaunchedOnce"];
+        [self customTutorial];
+    }
+}
+
+- (void)askingForRanking {
+    if([[NSUserDefaults standardUserDefaults] integerForKey:@"runTimes"] >= 3) {
+        [[NSUserDefaults standardUserDefaults] setInteger:0 forKey:@"runTimes"];
+        [self displayRateAlert];
+    } else {
+        NSInteger x = [[NSUserDefaults standardUserDefaults] integerForKey:@"runTimes"];
+        x = x + 1;
+        [[NSUserDefaults standardUserDefaults] setInteger:x forKey:@"runTimes"];
+    }
+
+}
+
+- (void)displayRateAlert {
+    NSMutableArray *alertActions = [NSMutableArray new];
+    
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"NO" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+    }];
+    
+    UIAlertAction *goToStore = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+         NSString *iTunesLink = appstoreURL;
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:iTunesLink]];
+    }];
+    
+    [alertActions addObject:goToStore];
+    [alertActions addObject:cancelAction];
+    
+    NSString *alertBody = NSLocalizedString(@"Rate.DoYou", @"");
+    ALERT_WITH_ACTIONS(@"", alertBody, self, alertActions, UIAlertControllerStyleAlert);
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)customizeMinuteLabel {
+    NSString *storeTime = [NSString stringWithFormat:@"%li", (long)(CUELGAStoreMinutes)];
+    self.minuteLabel.text = storeTime;
+}
+
+- (void)customTutorial {
+    
+    CGSize screenSize = [[UIScreen mainScreen] bounds].size;
+    UIImage *imageWithCustomColor = [self imageWithColor:nil andSize:screenSize];
+    UIFont *titleFont = [UIFont fontWithName:@"Roboto-Regular" size:26.0];
+    UIFont *descFont = [UIFont fontWithName:@"Roboto-Regular" size:18.0];
+    
+    EAIntroPage *page1 = [EAIntroPage page];
+    page1.titleFont = titleFont;
+    page1.titlePositionY = 400;
+    page1.title = NSLocalizedString(@"Tutorial.title1", @"");
+    page1.descPositionY = 300;
+    page1.descFont = descFont;
+    page1.desc = NSLocalizedString(@"Tutorial.subTitle1", @"");
+    page1.bgImage = imageWithCustomColor;
+    
+    EAIntroPage *page2 = [EAIntroPage page];
+    page2.titleFont = titleFont;
+    page2.titlePositionY = 400;
+    page2.title = NSLocalizedString(@"Tutorial.title2", @"");
+    page2.descPositionY = 300;
+    page2.descFont = descFont;
+    page2.desc = NSLocalizedString(@"Tutorial.subTitle2", @"");
+    page2.bgImage = imageWithCustomColor;
+    
+    EAIntroPage *page3 = [EAIntroPage page];
+    page3.titleFont = titleFont;
+    page3.titlePositionY = 400;
+    page3.title = NSLocalizedString(@"Tutorial.title3", @"");
+    page3.descPositionY = 300;
+    page3.descFont = descFont;
+    page3.desc = NSLocalizedString(@"Tutorial.subTitle3", @"");
+    page3.bgImage = imageWithCustomColor;
+    
+    EAIntroView *intro = [[EAIntroView alloc] initWithFrame:[[UIScreen mainScreen] bounds] andPages:@[page1, page2, page3]];
+    intro.tag = 121;
+    
+    intro.backgroundColor = [UIColor clearColor];
+    
+    [intro setDelegate:self];
+    [intro showInView:[[UIApplication sharedApplication] keyWindow] animateDuration:0.5];
+}
+
+- (UIImage *)imageWithColor:(UIColor *)color andSize:(CGSize)size {
+    
+    color = [UIColor colorWithRed:102.0f / 255.0f green:102.0f / 255.0f blue:102.0f / 255.0f alpha:0.7f];
+    
+    CGRect rect = CGRectMake(0.0f, 0.0f, size.width, size.height);
+    UIGraphicsBeginImageContext(rect.size);
+
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetFillColorWithColor(context, [color CGColor]);
+    CGContextFillRect(context, rect);
+    
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    
+    return image;
+}
+
+- (void)intro:(EAIntroView *)introView pageAppeared:(EAIntroPage *)page withIndex:(NSUInteger)pageIndex {
+    
+    [self.tabBarController setSelectedIndex:pageIndex];
+}
+
+- (void)introDidFinish:(EAIntroView *)introView {
+    [self.tabBarController setSelectedIndex:0];
 }
 
 - (void)customizeNavigationBar {
@@ -124,7 +266,6 @@
 }
 
 - (BOOL)validatePhoneNumber:(NSString *)phone {
-    
     if (![phone isKindOfClass:[NSString class]]) {
         return NO;
     }
@@ -139,8 +280,10 @@
 }
 
 - (void)storeFavNumberWithContactName:(NSString *)contactName andPhone:(NSString *)phone {
-
-    if ([self.storeContactNames containsObject:@"Selecciona un contacto presionando '+' "]) {
+    
+    NSString *instructions = NSLocalizedString(@"Contacts.instructions", @"");
+    
+    if ([self.storeContactNames containsObject:instructions]) {
         [self.storeContactNames removeObjectAtIndex:0];
         [self.storeContactPhones removeObjectAtIndex:0];
     }
@@ -231,7 +374,7 @@
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     //TODO: translate this
-    return @"Contactos Frecuentes";
+    return NSLocalizedString(@"Contacts.tableTittle", @"");
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -255,6 +398,7 @@
      }
      
      cell.textLabel.font = [UIFont fontWithName:@"Roboto-Regular" size:22.0];
+     cell.textLabel.adjustsFontSizeToFitWidth = YES;
      
      cell.textLabel.text = self.storeContactNames[dataItemIndex];
      cell.detailTextLabel.text = self.storeContactPhones[dataItemIndex];

@@ -1,0 +1,43 @@
+/* 
+  Localizable.strings
+  cuelga
+
+  Created by Jorge on 3/28/15.
+  Copyright (c) 2015 kineticsdk. All rights reserved.
+*/
+
+/*Tutorial*/
+"CFBundleDisplayName" = "Cuelga";
+"CFBundleName" = "Cuelga";
+"Rate.DoYou" = "Te gusto esta app ? \n dejanos saber tus comentarios.";
+
+"Tutorial.title1" = "Selecciona tus contactos";
+"Tutorial.subTitle1" = "Selecciona un contacto de tu directorio presionando '+' \ncuando realizes una llamada serás alertado a los 5 minutos.";
+
+"Tutorial.title2" = "Marca un número de teléfono";
+"Tutorial.subTitle2" = "sin importar que número telefónico marqués una notificación te alertará cuando el tiempo de tu llamada se este agotando.";
+
+"Tutorial.title3" = "Cpnfigura tus alertas";
+"Tutorial.subTitle3" = "Puedes configurar el sonido y el tiempo de tus alertas.";
+
+/*Contact*/
+"Contacts.tableTittle" = "Contactos Recientes";
+"Contacts.title" = "Contactos";
+"Contacts.instructions" = "Selecciona un contacto presionando '+'";
+
+/*Call section*/
+"Call.phoneNumber" = "número de teléfono";
+"Call.title" = " ";
+"Call.hangUp" = "Cuelga Ahora!!";
+
+/*Settings*/
+"Settings.minute" = "minuto";
+"Settings.title" = "Ajustes";
+"Settings.time" = "Tiempo";
+"Settings.alarm" = "Alarma";
+"Settings.info" = "Tips para ahorrar minutos:\n\n1.Las operadoras cuentan el tiempo en llamada desde que presionas sobre el boton de marcar, en lugar de contar el tiempo una vez tu llamada es contestada.\n\n2.Recuerda no cerrar la aplicación durante la llamada.\n\n3.Esta app NO cuelga las llamadas directamente. (ninguna puede hacerlo)\n\n4.Para poder recibir la notifcacion la llamada debe ser realizada desde la app";
+
+/*Alerts*/
+"Alert.YouNeed" = "Necesitas agregar un nuevo contacto\n presiona '+'\n y selecciona uno de tu lista de contactos.";
+"Alert.RememberBy" = "Recuerda que tu alerta será a los 5 minutes\nPero puedes cambiar el tiempo de alerta en la sección de ajuste.";
+"Alert.YouNeedType" = "Necesitas ingresar un número válido.";

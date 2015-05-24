@@ -12,6 +12,7 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *alertTimeField;
 @property (weak, nonatomic) IBOutlet UITextField *soundField;
+@property (weak, nonatomic) IBOutlet UITextView *tipsView;
 @property (strong, nonatomic) UIPickerView *timePickerView;
 @property (strong, nonatomic) UIPickerView *soundPickerView;
 @property (strong, nonatomic) NSArray *minutes;
@@ -30,15 +31,18 @@ typedef NS_ENUM(NSInteger, tableSections) {
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     self.minutes = @[@1, @5, @10, @15];
-    self.sounds = @[@"Default.mp3", @"Default.mp3", @"Default.mp3"];
+    self.sounds = @[@"Default.aiff", @"Alarm.caf", @"Bloom.caf"];
     
+    self.title = NSLocalizedString(@"Settings.title", @"");
     self.alertTimeField.text = [NSString stringWithString:[self formatTimeLabel:CUELGAStoreMinutes]];
-    self.soundField.text = [NSString stringWithString:CUELGAStoreSound];
-    
+    self.tipsView.text = NSLocalizedString(@"Settings.info", @"");
     self.alertTimeField.inputView = [self createTimePickerView];
     self.soundField.inputView = [self createSoundPickerView];
+    
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+    [self customizeSoundTextField];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -50,15 +54,29 @@ typedef NS_ENUM(NSInteger, tableSections) {
     [super viewWillDisappear:animated];
 }
 
-- (NSString *)formatTimeLabel:(NSInteger)storedNumber {
+- (void)customizeSoundTextField {
+    NSString *storedIndex = CUELGAStoreSound;
+    NSInteger index = [self.sounds indexOfObject:storedIndex];
+    NSArray *soundNames = [self.sounds[index] componentsSeparatedByString:@"."];
+    NSString *clearName = soundNames[0];
     
-    NSMutableString *alertTextfieldText = [NSMutableString stringWithFormat:@"%ld minuto",(long)storedNumber];
+    self.soundField.text = clearName;
+}
+
+- (NSString *)formatTimeLabel:(NSInteger)storedNumber {
+    NSString *minutoString = NSLocalizedString(@"Settings.minute", @"");
+    NSMutableString *alertTextfieldText = [NSMutableString stringWithFormat:@"%ld %@",(long)storedNumber, minutoString];
     
     if (storedNumber != 1) {
         [alertTextfieldText appendString:@"s"];
     }
     
     return alertTextfieldText;
+}
+
+- (IBAction)didTapRateMe:(id)sender {
+    NSString *iTunesLink = appstoreURL;
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:iTunesLink]];
 }
 
 #pragma mark - Table view data source
@@ -80,6 +98,13 @@ typedef NS_ENUM(NSInteger, tableSections) {
 
 #pragma mark TimePicker
 
+- (void)didTapDoneFromSoundPicker {
+    [self.view endEditing:YES];
+    
+    NSInteger selectedRow = [self.soundPickerView selectedRowInComponent:0];
+    [DNPStoreSettings setObject:self.sounds[selectedRow] forKey:@"storeSound"];
+}
+
 - (void)didTapDoneFromPicker {
     [self.view endEditing:YES];
     
@@ -87,8 +112,7 @@ typedef NS_ENUM(NSInteger, tableSections) {
     [DNPStoreSettings setObject:self.minutes[selectedRow] forKey:@"storeMinutes"];
 }
 
-- (UIView *)createSoundPickerView
-{
+- (UIView *)createSoundPickerView {
     CGFloat widht = self.view.frame.size.width;
     
     UIView *containerPickerView = [[UIView alloc] initWithFrame:CGRectMake(0.0f, 50.0f, widht, 216.0f)];
@@ -102,7 +126,7 @@ typedef NS_ENUM(NSInteger, tableSections) {
     UIToolbar *toolBar= [[UIToolbar alloc] initWithFrame:CGRectMake(0.0f, 0.0f, widht, 44.0f)];
     [toolBar setBarStyle:UIBarStyleBlackOpaque];
     //TODO: translate this
-    UIBarButtonItem *barButtonNext = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStylePlain target:self action:@selector(didTapDoneFromPicker)];
+    UIBarButtonItem *barButtonNext = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStylePlain target:self action:@selector(didTapDoneFromSoundPicker)];
     barButtonNext.tintColor = [UIColor blackColor];
     
     UIBarButtonItem *flex = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil];
@@ -112,14 +136,13 @@ typedef NS_ENUM(NSInteger, tableSections) {
     [containerPickerView addSubview:toolBar];
     [containerPickerView addSubview:self.soundPickerView];
     
-    NSInteger storedIndex = CUELGAStoreMinutes;
-    [self.soundPickerView selectRow:storedIndex inComponent:0 animated:YES];
+    NSString *storedIndex = CUELGAStoreSound;
+    [self.soundPickerView selectRow:[self.sounds indexOfObject:storedIndex] inComponent:0 animated:YES];
     
     return containerPickerView;
 }
 
-- (UIView *)createTimePickerView
-{
+- (UIView *)createTimePickerView {
     CGFloat widht = self.view.frame.size.width;
     
     UIView *containerPickerView = [[UIView alloc] initWithFrame:CGRectMake(0.0f, 50.0f, widht, 216.0f)];
@@ -144,18 +167,16 @@ typedef NS_ENUM(NSInteger, tableSections) {
     [containerPickerView addSubview:self.timePickerView];
     
     NSInteger storedIndex = CUELGAStoreMinutes;
-    [self.timePickerView selectRow:storedIndex inComponent:0 animated:YES];
+    [self.timePickerView selectRow:[self.minutes indexOfObject:[NSNumber numberWithInt:storedIndex]] inComponent:0 animated:YES];
     
     return containerPickerView;
 }
 
--(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
-{
+-(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
     return 1;
 }
 
--(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
-{
+-(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
     if (pickerView == self.soundPickerView) {
         return self.sounds.count;
     } else if (pickerView == self.timePickerView) {
@@ -165,10 +186,10 @@ typedef NS_ENUM(NSInteger, tableSections) {
     return 0;
 }
 
--(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
-{
+-(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
     if (pickerView == self.soundPickerView) {
-        return [NSString stringWithFormat:@"%@",self.sounds[row]];
+        NSArray *soundNames = [self.sounds[row] componentsSeparatedByString:@"."];
+        return [NSString stringWithFormat:@"%@",soundNames[0]];
     } else if (pickerView == self.timePickerView) {
         return [NSString stringWithFormat:@"%@",self.minutes[row]];
     }
@@ -176,15 +197,11 @@ typedef NS_ENUM(NSInteger, tableSections) {
     return  @"";
 }
 
--(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
-{
-    //TODO:translate this
-    if (pickerView == self.soundPickerView) {
-        
-        NSString *alertTextfieldText = [NSString stringWithFormat:@"%@",self.sounds[row]];
-        self.soundField.text = alertTextfieldText;
+-(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
+   if (pickerView == self.soundPickerView) {
+        NSArray *soundNames = [self.sounds[row] componentsSeparatedByString:@"."];
+        self.soundField.text = soundNames[0];
     } else if (pickerView == self.timePickerView) {
-       
         NSString *alertTextfieldText = [self formatTimeLabel:[self.minutes[row] integerValue]];
         self.alertTimeField.text = alertTextfieldText;
     }

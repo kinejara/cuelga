@@ -5,39 +5,79 @@
 //  Created by Jorge Villa on 1/22/15.
 //  Copyright (c) 2015 kineticsdk. All rights reserved.
 //
+
+#import <GoogleMobileAds/GoogleMobileAds.h>
 #import "NSString+PNGValidation.h"
 #import "PNGPhoneNumberFormatter.h"
-#import "SecondViewController.h"
+#import "CallSectionViewController.h"
 #import "Contact.h"
 #import "CallManager.h"
 #import "AppDelegate.h"
+#import "EAIntroView.h"
 
-@interface SecondViewController ()
+@interface CallSectionViewController ()
 
+@property (weak, nonatomic) IBOutlet GADBannerView *bottomBanner;
 @property (weak, nonatomic) IBOutlet UITextField *phoneTextField;
+@property (weak, nonatomic) IBOutlet UILabel *minuteLabel;
 @property (weak, nonatomic) IBOutlet UIButton *callButton;
+
 
 @end
 
-@implementation SecondViewController
+@implementation CallSectionViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.title = NSLocalizedString(@"Call.title", @"");
+    
+    self.phoneTextField.placeholder = NSLocalizedString(@"Call.phoneNumber", @"");
+    [self customizeBottomBanner];
 }
+
+
+- (void)customizeBottomBanner {
+    self.bottomBanner.adUnitID = @"ca-app-pub-5770021040900540/7336996912";
+    self.bottomBanner.rootViewController = self;
+    [self.bottomBanner loadRequest:[GADRequest request]];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
--(void) viewWillAppear:(BOOL)animated {
-    [self.phoneTextField becomeFirstResponder];
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
     [self customizeCallButton];
+    [self customizeMinuteLabel];
+    [self showKeyboard];
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillToggle:)
                                                  name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillToggle:)
                                                  name:UIKeyboardWillHideNotification object:nil];
+}
+
+- (void)showKeyboard {
+    NSArray *viewsOnTop = [UIApplication sharedApplication].delegate.window.subviews;
+    
+    BOOL isTutorialOnTop = NO;;
+    
+    for (UIView *subview in viewsOnTop) {
+        if(subview.tag == 121) {
+            isTutorialOnTop = YES;
+        }
+    }
+    
+    if (!isTutorialOnTop) {
+        [self.phoneTextField becomeFirstResponder];
+    }
+}
+
+- (void)customizeMinuteLabel {
+    self.minuteLabel.text = [NSString stringWithFormat:@"%li", (long)(CUELGAStoreMinutes)];
 }
 
 - (void)customizeCallButton {
@@ -55,9 +95,11 @@
                                                     name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self
                                                     name:UIKeyboardWillHideNotification  object:nil];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"showKeyboard" object:nil];
 }
 
-- (void) keyboardWillToggle:(NSNotification *)aNotification {
+- (void)keyboardWillToggle:(NSNotification *)aNotification {
     CGRect frame = [[[self tabBarController] tabBar] frame];
     CGRect keyboard = [[aNotification.userInfo valueForKey:@"UIKeyboardFrameEndUserInfoKey"] CGRectValue];
     frame.origin.y = keyboard.origin.y - frame.size.height;

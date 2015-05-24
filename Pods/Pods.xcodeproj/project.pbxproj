@@ -1,0 +1,307 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		75738F5CC512EF268C70F90B /* Pods-cuelga-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D4CD27A84372E8737EB6E96 /* Pods-cuelga-dummy.m */; };
+		D241B39221F7FE7BDB7529AB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 146D964880572F7947E67E20 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		12C443349D7874201C53A96B /* libPods-cuelga.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cuelga.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		146D964880572F7947E67E20 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		5D1116F626A7F33550D4C268 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		6B1474109FD5DD4979F08DC9 /* Pods-cuelga-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-cuelga-acknowledgements.markdown"; sourceTree = "<group>"; };
+		798D1DB5FE82A7F4174B6176 /* Pods-cuelga.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-cuelga.release.xcconfig"; sourceTree = "<group>"; };
+		7D4CD27A84372E8737EB6E96 /* Pods-cuelga-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-cuelga-dummy.m"; sourceTree = "<group>"; };
+		9AD88CDCE3ADCE9ABD0D7F61 /* Pods-cuelga-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-cuelga-environment.h"; sourceTree = "<group>"; };
+		B1E71833780D758A23BF5886 /* Pods-cuelga-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-cuelga-resources.sh"; sourceTree = "<group>"; };
+		BCB5609E723AE0718E6CEDE2 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = "GoogleMobileAdsSdkiOS-7.2.2/GoogleMobileAds.framework"; sourceTree = "<group>"; };
+		CFC19BA6008298C720CA14F3 /* Pods-cuelga.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-cuelga.debug.xcconfig"; sourceTree = "<group>"; };
+		E82D4955AB45ECD9C5A91FB3 /* Pods-cuelga-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-cuelga-acknowledgements.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7ED09A097A891B8C80F2F9DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D241B39221F7FE7BDB7529AB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1565CA77DCC878269D081640 /* Pods-cuelga */ = {
+			isa = PBXGroup;
+			children = (
+				6B1474109FD5DD4979F08DC9 /* Pods-cuelga-acknowledgements.markdown */,
+				E82D4955AB45ECD9C5A91FB3 /* Pods-cuelga-acknowledgements.plist */,
+				7D4CD27A84372E8737EB6E96 /* Pods-cuelga-dummy.m */,
+				9AD88CDCE3ADCE9ABD0D7F61 /* Pods-cuelga-environment.h */,
+				B1E71833780D758A23BF5886 /* Pods-cuelga-resources.sh */,
+				CFC19BA6008298C720CA14F3 /* Pods-cuelga.debug.xcconfig */,
+				798D1DB5FE82A7F4174B6176 /* Pods-cuelga.release.xcconfig */,
+			);
+			name = "Pods-cuelga";
+			path = "Target Support Files/Pods-cuelga";
+			sourceTree = "<group>";
+		};
+		51BA9E5CF12CDC2999088228 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				146D964880572F7947E67E20 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7BE0856AB5AEBC944EA22213 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1565CA77DCC878269D081640 /* Pods-cuelga */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		C56ABDB350413F00BEB4B058 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F1488335D12A918F08A1B174 /* Google-Mobile-Ads-SDK */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CFA315BCEB466C7873A23817 = {
+			isa = PBXGroup;
+			children = (
+				5D1116F626A7F33550D4C268 /* Podfile */,
+				F96ED10F6D278428775CDD11 /* Frameworks */,
+				C56ABDB350413F00BEB4B058 /* Pods */,
+				F70FC8C796C1F789AF873A9F /* Products */,
+				7BE0856AB5AEBC944EA22213 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D65F3FC1DA40A350640F583A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BCB5609E723AE0718E6CEDE2 /* GoogleMobileAds.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F1488335D12A918F08A1B174 /* Google-Mobile-Ads-SDK */ = {
+			isa = PBXGroup;
+			children = (
+				D65F3FC1DA40A350640F583A /* Frameworks */,
+			);
+			path = "Google-Mobile-Ads-SDK";
+			sourceTree = "<group>";
+		};
+		F70FC8C796C1F789AF873A9F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				12C443349D7874201C53A96B /* libPods-cuelga.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F96ED10F6D278428775CDD11 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				51BA9E5CF12CDC2999088228 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CEB8149622B3E32826E0A5B1 /* Pods-cuelga */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3654A6F761D40EF8BA78CE29 /* Build configuration list for PBXNativeTarget "Pods-cuelga" */;
+			buildPhases = (
+				AC4915E2A669DF842F9DF6BA /* Sources */,
+				7ED09A097A891B8C80F2F9DE /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-cuelga";
+			productName = "Pods-cuelga";
+			productReference = 12C443349D7874201C53A96B /* libPods-cuelga.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8178AD6B0845071DE7859B9A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+			};
+			buildConfigurationList = F136FB46AD90FC9A644013C9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CFA315BCEB466C7873A23817;
+			productRefGroup = F70FC8C796C1F789AF873A9F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CEB8149622B3E32826E0A5B1 /* Pods-cuelga */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AC4915E2A669DF842F9DF6BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75738F5CC512EF268C70F90B /* Pods-cuelga-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		41F3AAD38F772ED35813432D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		710A9C1C0585A092A155E245 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 798D1DB5FE82A7F4174B6176 /* Pods-cuelga.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		7E721A2BE615D5674528778A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		8F77F21381CD73596DDE51F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFC19BA6008298C720CA14F3 /* Pods-cuelga.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3654A6F761D40EF8BA78CE29 /* Build configuration list for PBXNativeTarget "Pods-cuelga" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F77F21381CD73596DDE51F7 /* Debug */,
+				710A9C1C0585A092A155E245 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F136FB46AD90FC9A644013C9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E721A2BE615D5674528778A /* Debug */,
+				41F3AAD38F772ED35813432D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8178AD6B0845071DE7859B9A /* Project object */;
+}
